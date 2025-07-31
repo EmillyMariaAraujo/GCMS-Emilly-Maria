@@ -19,6 +19,7 @@ return "Hello, Emilly!";
 public @ResponseBody String greetingRamide() {
 return "Hello, Ramide!";
 }
+//testando
 
 @RequestMapping("/Laura")
 public @ResponseBody String greetingLaura() {
