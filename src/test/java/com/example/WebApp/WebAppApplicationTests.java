@@ -22,16 +22,16 @@ class WebAppApplicationTests {
     public void shouldReturnDefaultMessage() throws Exception {
         this.mockMvc.perform(get("/"))
             .andDo(print())
-            .andExpect(status().isOk())  // Verifica se o status é 200 OK
-            .andExpect(content().string(containsString("Hello, World!")));  // Verifica o conteúdo da resposta
+            .andExpect(status().isOk())  
+            .andExpect(content().string(containsString("Hello, World!")));  
     }
 
     @Test
     public void shouldReturnEmillyMessage() throws Exception {
         this.mockMvc.perform(get("/Emilly"))
             .andDo(print())
-            .andExpect(status().isOk())  // Verifica se o status é 200 OK
-            .andExpect(content().string(containsString("Hello, Emilly!")));  // Verifica o conteúdo da resposta
+            .andExpect(status().isOk())  
+            .andExpect(content().string(containsString("Hello, Emilly!")));  
     }
 
   
@@ -39,7 +39,15 @@ class WebAppApplicationTests {
     public void shouldReturnRamideMessage() throws Exception {
         this.mockMvc.perform(get("/Ramide"))
             .andDo(print())
-            .andExpect(status().isOk())  // Verifica se o status é 200 OK
-            .andExpect(content().string(containsString("Hello, Ramide!")));  // Verifica o conteúdo da resposta
+            .andExpect(status().isOk()) 
+            .andExpect(content().string(containsString("Hello, Ramide!")));  
+    }
+    
+    @Test
+    public void shouldReturnLauraMessage() throws Exception {
+        this.mockMvc.perform(get("/Laura"))
+            .andDo(print())
+            .andExpect(status().isOk())  
+            .andExpect(content().string(containsString("Hello, Laura!"))); 
     }
 }
